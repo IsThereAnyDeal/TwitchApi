@@ -1,0 +1,12 @@
+{
+  "name": "itad/twitchapi",
+  "autoload": {
+    "psr-4": {
+      "IsThereAnyDeal\\Twitch\\Api\\": "src"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.4"
+  }
+}
