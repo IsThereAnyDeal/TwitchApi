@@ -1,5 +1,5 @@
 {
-  "name": "itad/twitchapi",
+  "name": "itad/twitch-api",
   "autoload": {
     "psr-4": {
       "IsThereAnyDeal\\Twitch\\Api\\": "src"
