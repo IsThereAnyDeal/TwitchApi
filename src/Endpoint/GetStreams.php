@@ -26,6 +26,11 @@ class GetStreams extends AbstractPaginableEndpoint {
         return $this;
     }
 
+    public function setUserLogin(string $userLogin): self {
+        $this->setParam("user_login", $userLogin);
+        return $this;
+    }
+
     public function setChannelFilter(array $skipChannels): self {
         $this->skippedChannelsMap = array_flip($skipChannels);
         return $this;
