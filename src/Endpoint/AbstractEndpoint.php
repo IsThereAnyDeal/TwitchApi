@@ -66,11 +66,11 @@ abstract class AbstractEndpoint {
         ]);
 
         if ($response->getHeader("Ratelimit-Limit")) {
-            $this->rateLimit = $response->getHeader("Ratelimit-Limit")[0];
+            $this->rateLimit = (int)$response->getHeader("Ratelimit-Limit")[0];
         }
 
         if ($response->getHeader("Ratelimit-Remaining")) {
-            $this->rateLimitRemaining = $response->getHeader("Ratelimit-Remaining")[0];
+            $this->rateLimitRemaining = (int)$response->getHeader("Ratelimit-Remaining")[0];
         }
 
         if ($response->getStatusCode() == 429) {
