@@ -1,6 +1,7 @@
 <?php
 namespace IsThereAnyDeal\Twitch\Api\Endpoint;
 
+use Generator;
 use GuzzleHttp\Client;
 use IsThereAnyDeal\Twitch\Api\Credentials;
 use IsThereAnyDeal\Twitch\Api\Exception\TwitchApiException;
@@ -90,7 +91,7 @@ abstract class AbstractPaginableEndpoint extends AbstractEndpoint {
         }
     }
 
-    public function getItemEnumerator(int $limit = -1): iterable {
+    public function getItemEnumerator(int $limit = -1): Generator {
         $data = $this->getNextPage();
 
         $items = 0;

@@ -1,6 +1,7 @@
 <?php
 namespace IsThereAnyDeal\Twitch\Api\Endpoint;
 
+use Generator;
 use GuzzleHttp\Client;
 use IsThereAnyDeal\Twitch\Api\Credentials;
 
@@ -36,7 +37,7 @@ class GetStreams extends AbstractPaginableEndpoint {
         return $this;
     }
 
-    public function getItemEnumerator(int $limit = -1): iterable {
+    public function getItemEnumerator(int $limit = -1): Generator {
         $enumerator = parent::getItemEnumerator($limit);
         foreach($enumerator as $item) {
             $username = $item['user_name'];
