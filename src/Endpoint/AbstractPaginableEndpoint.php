@@ -41,6 +41,7 @@ abstract class AbstractPaginableEndpoint extends AbstractEndpoint {
         return $params;
     }
 
+    /** @return static */
     public function setFirst(int $size): self {
         $this->setParam("first", $size);
         return $this;

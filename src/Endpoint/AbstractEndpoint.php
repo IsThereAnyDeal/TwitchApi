@@ -29,6 +29,7 @@ abstract class AbstractEndpoint {
         $this->client = $client;
     }
 
+    /** @return static */
     public function setToken(?Token $token): self {
         if (!is_null($token)) {
             $this->token = $token;

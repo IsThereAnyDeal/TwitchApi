@@ -13,6 +13,7 @@ class GetGames extends AbstractPaginableEndpoint {
         parent::__construct($credentials, $client, self::Endpoint, self::Method);
     }
 
+    /** @return static */
     public function setGameId(int $twitchGameId): self {
         $this->setParam("id", $twitchGameId);
         return $this;

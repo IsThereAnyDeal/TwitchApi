@@ -17,21 +17,25 @@ class GetStreams extends AbstractPaginableEndpoint {
         $this->setLanguage("en");
     }
 
+    /** @return static */
     public function setGameId(int $twitchGameId): self {
         $this->setParam("game_id", $twitchGameId);
         return $this;
     }
 
+    /** @return static */
     public function setLanguage(string $language): self {
         $this->setParam("language", $language);
         return $this;
     }
 
+    /** @return static */
     public function setUserLogin(string $userLogin): self {
         $this->setParam("user_login", $userLogin);
         return $this;
     }
 
+    /** @return static */
     public function setChannelFilter(array $skipChannels): self {
         $this->skippedChannelsMap = array_flip($skipChannels);
         return $this;
